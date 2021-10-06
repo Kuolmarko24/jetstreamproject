@@ -13,7 +13,7 @@
         @endif
 
         <form method="POST" action="{{ route('login') }}">
-            @csrf
+            {{ csrf_field() }}
 
             <div>
                 <x-jet-label for="email" value="{{ __('Email') }}" />
@@ -42,6 +42,10 @@
                 <x-jet-button class="ml-4">
                     {{ __('Log in') }}
                 </x-jet-button>
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                    {{ __('Register new user') }}
+                </a>
+                
             </div>
         </form>
     </x-jet-authentication-card>

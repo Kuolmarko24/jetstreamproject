@@ -22,4 +22,7 @@ class userController extends Controller
     public function loginactivity(){
         return view('backend.usermanage.loginactivity');
     }
+    public function emailtemplate(){
+        return view('backend.emailtemplate');
+    }
 }
